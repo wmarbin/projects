@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="last" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f510184d-f757-4e0b-8f3b-e8dd13e5c8cd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="aten"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Dbtable where fname != ""]]>
+	</queryString>
+	<field name="fname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<field name="teacher" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="teacher"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<field name="stitle" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="stitle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<field name="stable" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="stable"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Dbtable"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="214" y="20" width="361" height="51" uuid="a354cbf3-c9df-452a-9fa9-bd273805346e"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[DonMaTrix]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="181" height="21" uuid="014ebcfa-7a4a-43fc-b777-dd79e37ec713"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Attendance Sheet]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="36" width="71" height="21" uuid="0c0c54d5-1e13-4e1a-8859-2780ed5cec34"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="36" width="71" height="21" uuid="3b793ca2-e09d-4330-ad0f-3db0d3b4ee18"/>
+				<text><![CDATA[Teacher]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="36" width="71" height="21" uuid="33cd1577-1331-43e1-855d-74328256f6ed"/>
+				<text><![CDATA[Subject Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="36" width="71" height="21" uuid="a3655c99-15ab-4277-bdf9-0f65e8adb8d2"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="36" width="71" height="21" uuid="aa4f996e-8367-46fb-b6c9-a55e2922b613"/>
+				<text><![CDATA[Date/Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="36" width="71" height="21" uuid="3833d3e3-1381-4b37-af90-ceec8990411d"/>
+				<text><![CDATA[Table no.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e50ea3d3-b44e-4ab5-9f27-443becde85be"/>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="82bdb3c6-88f4-4ec2-b9d5-258e19ad112c"/>
+				<textFieldExpression><![CDATA[$F{teacher}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="18c4db48-7ba0-4f12-b4c5-30fdb40bd0b1"/>
+				<textFieldExpression><![CDATA[$F{stitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="71" height="20" uuid="186fbd5d-5e07-4e82-b9c7-39e0d6222dba"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="100" height="20" uuid="0efc4748-2e14-4aa8-8436-39eaac4b95d8"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="85" height="20" uuid="9838e037-295a-4e28-8b69-855d9320391d"/>
+				<textFieldExpression><![CDATA[$F{stable}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
